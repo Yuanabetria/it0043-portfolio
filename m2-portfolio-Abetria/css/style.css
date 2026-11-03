@@ -1,0 +1,254 @@
+
+:root {
+  --primary: #10b981;
+  --primary-hover: #059669;
+  --bg-color: #064e3b;
+  --card-bg: rgba(255, 255, 255, 0.08);
+  --text-color: #ffffff;
+  --text-muted: #d1fae5;
+  --border-color: rgba(255, 255, 255, 0.2);
+  --focus-ring: #34d399;
+
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+
+  --font-main: Arial, Helvetica, sans-serif;
+  --fs-sm: 14px;
+  --fs-base: 16px;
+  --fs-md: 20px;
+  --fs-lg: 24px;
+  --fs-xl: 30px;
+}
+
+- {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  font-size: var(--fs-base);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  padding: var(--space-md);
+  text-align: center;
+}
+
+h1 {
+  font-size: var(--fs-lg);
+  margin-bottom: var(--space-sm);
+}
+
+h2 {
+  font-size: var(--fs-md);
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-sm);
+}
+
+h3 {
+  font-size: var(--fs-base);
+  color: var(--text-muted);
+  margin-bottom: var(--space-sm);
+}
+
+p {
+  color: var(--text-muted);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: var(--space-md);
+}
+
+/* milestone 1: flexbox nav */
+nav {
+  margin: var(--space-md) 0 var(--space-lg);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+nav a, .btn, button, input[type="submit"], input[type="reset"] {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--text-color);
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: 6px;
+  font-size: var(--fs-sm);
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+nav a:hover, .btn:hover, button:hover, input[type="submit"]:hover {
+  background-color: var(--primary);
+  border-color: var(--primary-hover);
+}
+
+nav a:focus-visible, .btn:focus-visible, button:focus-visible, input:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* milestone 2: css grid */
+.card, section, .table-container {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: var(--space-md);
+  max-width: 650px;
+  margin: var(--space-md) auto;
+  text-align: left;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xs);
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: var(--space-md);
+  max-width: 650px;
+  margin: var(--space-md) auto;
+  text-align: left;
+}
+
+ol, ul.skills-list {
+  padding-left: var(--space-xl);
+  margin-bottom: var(--space-md);
+}
+
+li {
+  margin-bottom: var(--space-sm);
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 400px;
+}
+
+th, td {
+  border: 1px solid var(--border-color);
+  padding: 10px 12px;
+  text-align: left;
+}
+
+th {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+label {
+  display: block;
+  font-size: var(--fs-sm);
+  margin-top: var(--space-sm);
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+  width: 100%;
+  padding: var(--space-sm);
+  margin-top: var(--space-xs);
+  margin-bottom: var(--space-sm);
+  border-radius: 5px;
+  border: 1px solid var(--border-color);
+  background-color: rgba(0, 0, 0, 0.2);
+  color: var(--text-color);
+  font-family: inherit;
+  font-size: var(--fs-base);
+}
+
+.button-group {
+  margin-top: var(--space-sm);
+  display: flex;
+  gap: var(--space-sm);
+}
+
+footer {
+  margin-top: var(--space-xl);
+  font-size: var(--fs-sm);
+  opacity: 0.8;
+}
+
+ 
+@media (min-width: 480px) {
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  body {
+    padding: var(--space-lg);
+  }
+
+  h1 {
+    font-size: var(--fs-xl);
+  }
+}
+
+@media (min-width: 768px) {
+  form {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-sm) var(--space-md);
+  }
+
+  form .full-width,
+  form .button-group {
+    grid-column: span 2;
+  }
+
+  .card, section {
+    padding: var(--space-lg);
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    padding: var(--space-xl);
+  }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  nav a, .btn, button, input[type="submit"], input[type="reset"] {
+    transition: none;
+  header nav ul {
+    display: flex;
+    list-style: none;
+    gap: var(--space-md);
+    justify-content: center;
+}
+
+/* 2. CSS Grid para sa Layout ng Cards o Content */
+.card, .skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-lg);
+}
+
+
+@media (min-width: 768px) {
+    body {
+        font-size: var(--fs-md);
+    }
+}

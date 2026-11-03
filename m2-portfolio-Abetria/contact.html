@@ -1,0 +1,139 @@
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Table layout styling para pantay at malinis tingnan */
+        table {
+            width: 100%;
+            max-width: 750px;
+            border-collapse: collapse;
+            margin: 15px 0 25px 0;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px 14px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            color: #333;
+        }
+        tr:nth-child(even) {
+            background-color: #fafafa;
+        }
+        tr:hover {
+            background-color: #f1f5f9;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to Contact Page</h1>
+        <p>Feel free to reach out to our team or send us a direct message below.</p>
+        
+        <nav>
+            <ul>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./skills.html">Skills</a></li>
+                <li><a href="./index.html">Index</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="directory">
+            <h2>Department Directory</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Employee Name</th>
+                        <th>Position</th>
+                        <th>Contact Number</th>
+                        <th>Email Address</th>
+                        <th>Availability</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Alexander Reyes</strong></td>
+                        <td>Operations Manager</td>
+                        <td>0919 123 4567</td>
+                        <td>alex.reyes@company.com</td>
+                        <td>8:00 AM – 5:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Maria Santos</strong></td>
+                        <td>Technical Lead</td>
+                        <td>0917 567 1223</td>
+                        <td>maria.santos@company.com</td>
+                        <td>9:00 AM – 6:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Christian Del Rosario</strong></td>
+                        <td>Customer Support Lead</td>
+                        <td>0917 477 1223</td>
+                        <td>c.delrosario@company.com</td>
+                        <td>24/7 On-Call</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="contact-info">
+            <h2>Office Information</h2>
+            <p><strong>Address:</strong> 123 Business Avenue, Quezon City, Metro Manila, Philippines</p>
+            <p><strong>Office Hours:</strong> Monday – Friday, 8:00 AM – 5:00 PM</p>
+            <p><strong>Hotline:</strong> (02) 8123-4567</p>
+        </section>
+
+        <section id="inquiry-form">
+            <h3>Contact Us</h3>
+            <p>Please fill out the form below and we will get back to you within 24–48 hours.</p>
+
+            <form action="#" method="POST">
+                <label for="fname">Full Name:</label><br>
+                <input type="text" id="fname" name="fname" placeholder="Juan Dela Cruz" required><br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="example@mail.com" required><br><br>
+
+                <label for="pass">Password:</label><br>
+                <input type="password" id="pass" name="pass" placeholder="Enter your password" required><br><br>
+
+                <label for="subject">Subject / Inquiry Type:</label><br>
+                <select id="subject" name="subject">
+                    <option value="general">General Inquiry</option>
+                    <option value="support">Technical Support</option>
+                    <option value="feedback">Feedback / Suggestions</option>
+                </select><br><br>
+
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="5" cols="35" placeholder="Write your message here..."></textarea><br><br>
+
+                <input type="submit" value="Send Message">
+                <input type="reset" value="Clear Form">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <p>&copy; 2026 My Portfolio / Company Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+
+
+
+<section>
